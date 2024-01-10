@@ -1,0 +1,50 @@
+Ariana Borlak
+
+/etc/natas_webpass/
+
+======Level 1======
+Inspect page source
+g9D9cREhslqBKtcA2uocGHPfMZVzeFK6
+
+======Level 2======
+ctrl+shift+i
+Under Elements -> "content"
+h4ubbcXrWqsTo7GGnnUMLppXbOogfBZ7
+
+======Level 3======
+There's an image called files/pixel.png
+Go to files, find users.txt
+G6ctbMJ5Nb4cbFwhpMPSvxGHhQ7I6W8Q
+
+======Level 4======
+Google crawling
+robots.txt tells which URLs crawlers are allowed to see and which ones they aren't
+tKOcJIbzM4lTs8hbCmzn5Zr4434fGZQm
+
+======Level 5======
+Use Burpsuite to change referer to natas5
+Z0NsrtIkJoKALBCLi5eqFfcRN82Au2oD
+
+======Level 6======
+Use Burpsuite to change cookie for loggedin to be 1
+fOIvE0MDtPTgRhqmmvvAOt2EfXR6uQgR
+
+======Level 7======
+Go to /includes/secret.inc
+Put in secret FOEIUWGHFEEUHOFUOIU into form
+jmxSiH3SP6Sonf8dv66ng8v1cIEdjXWr
+
+======Level 8======
+/index.php?page=/etc/natas_webpass/natas8
+a6bZCNYwdKqN5cGP11ZdtPg0iImQQhAB
+
+======Level 9======
+encodeSecret($_POST['secret'])
+
+bin2hex(strrev(base64_encode($secret))) -> 
+	] + base64_decode(strrev(pack(3d3d516343746d4d6d6c315669563362)))'
+<?base64_decode(strrev(pack(3d3d516343746d4d6d6c315669563362)))?>
+
+======Level 10======
+
+======Level 11======
