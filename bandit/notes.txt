@@ -1,65 +1,92 @@
 Ariana Borlak
 
-Level 0
-ssh bandit0@bandit.labs.overthewire.org -p 2220
+======Level 0======
+ssh -p 2220 bandit0@bandit.labs.overthewire.org
 
-Level 1
+======Level 1======
 cat readme
 NH2SXQwcBdpmTEzi3bvBHMM9H66vVXjL
 
-Level 2
+======Level 2======
 https://unix.stackexchange.com/questions/16357/usage-of-dash-in-place-of-a-filename
 cat ./-
 rRGizSaX8Mk1RTb1CNQoXTcYZWU6lgzi
 
-Level 3
+======Level 3======
 cat "spaces in this filename"
 aBZ0W5EmUfAf7kHTQeOwd8bauFJ2lAiG
 
-Level 4
+======Level 4======
 cd inhere
 ls -a
 cat .hidden
 2EW7BBsr6aMMoJ2HjW067dm8EgX26xNe
 
-Level 5
+======Level 5======
 cd inhere
 cat ./-file07
 lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR
 
-Level 6
+cat ./-f*
+strings ./-f*
+file ./-*
+
+======Level 6======
 du -h (didn't work)
 find -size 1033c (c for bytes)
 cd maybehere07
 cat .file2
 P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
 
-Level 7
+======Level 7======
 find -size 33c | grep
 find / -user bandit7 -group bandit6 -size 33c
 	returned /var/lib/dpkg/info/bandit7.password
+2>/dev/null
 z7WtoNQU2XfjmMtWA8u5rN4vzqu4v99S
 
-Level 8
+======Level 8======
 cat data.txt | grep "^millionth"
 TESKZC0XvTetK0S9xNwm25STk5iWrBvP
 
-Level 9
+======Level 9======
 sort data.txt | uniq -u
 	uniq is only able to detect duplicate lines next to each other
 EN632PlfYiZbn3PhVK3XOGSlNInNE00t
 
-Level 10
+======Level 10======
 cat data.txt | grep -a "[ascii]" | grep -a "===" 
 grep -a "===" data.txt
 G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s
 
-Level 11
+strings data.txt
+grep --text "=="
+
+======Level 11======
 cat data.txt | base64 -d
 6zPeziLdR2RKNdNYFNb6nVCKzphlXHBM
 
-Level 12
+======Level 12======
 cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
 JVNBBFSmZwKKOP0XbFXOoW8chDz5yVRv
 
-Level 13
+======Level 13======
+mkdir /tmp/ariana
+cp data.txt /tmp/ariana/unzipped.txt
+compression headers:
+	https://iamhow.com/Technical_Notes/File_headers.html
+	data.txt matches gzip
+	xxd -r unzipped.txt | gzip -d | xxd 1> data.txt
+	doesn't match any other headers
+xxd -r unzipped.txt | gzip -d 1> data2.gz
+file data2.gz
+	bzip2 compressed data, block size = 900k
+	Need to rename file each time
+bzip2 -d data3.bz
+gzip -d data4.gz
+tar -xf data5.tar
+	use data5.bin not tar file
+tar -xf data6.tar
+	use data6.bin
+bzip2
+wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw
