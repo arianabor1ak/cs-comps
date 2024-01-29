@@ -1,0 +1,6 @@
+Ariana Borlak
+
+1. Downloaded Ubuntu for desktop
+2. Set up VM with Ubuntu on VMWare
+3. Made html pages and php scripts and put them in the Apache web tree
+4. Started server
