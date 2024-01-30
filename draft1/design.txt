@@ -4,20 +4,20 @@ IDEAS FOR FINAL TARGET
 https://attack.mitre.org/
 
 - Cron job!!!
-- That clicks on links, a phishing exploit
+	That clicks on links, a phishing exploit
 - AITM possibility for two internal machines
 - Setuid
 - Logging in as someone else on the web server, but as the first step
 - Something related to authentication
-- Email parameter pollution
+	Email parameter pollution
 - SQL injection/command injection
 - Log poisoning
 - Something with ssh/stealing private keys
 - Certificate/public key fabrication
 - Ex-employee credentials
 - Linux vulnerability that allows write access to read-only files
-- Dirty pipe
-- Searchsploit 50808
+	Dirty pipe
+	Searchsploit 50808
 - PASSWORD PROTECTED PAGES
 
 VULNERABLE MACHINE PROPOSAL
